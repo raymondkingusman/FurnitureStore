@@ -1,0 +1,123 @@
+
+
+.navbar-brand img{
+    width: 50px;
+    height: 50px;
+}
+.btn-outline-success{
+    border: none;
+    background-color: white;
+    color: black;
+
+}
+
+.btn-outline-success:hover{
+    border: none;
+    background-color: blanchedalmond;
+    color: black;
+
+}
+.nav-item:hover{
+    background-color: rgb(141, 236, 242);
+    cursor:pointer;
+    font-weight: bolder;
+}
+
+/* Home Page */
+.HomePage{
+    display:flex;
+    margin: 7px;
+}
+.section1{
+    display: none;
+    border-style: solid;
+    border-color: rgba(0, 0, 0,0.7);
+    border-radius: 6px;
+    height: 100%;
+    width: 25%;
+    margin: 2px;
+
+}
+.section2{
+    display: none;
+    border-style: solid;
+    border-color: rgba(0, 0, 0,0.7);
+    border-radius: 6px;
+    height: 100%;
+    width: 75%;
+    margin: 2px;
+}
+/*Category selection*/
+.selectHover:hover{
+    background-color: rgba(130, 130, 184,0.8);
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* Tables*/
+.tableIntro{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid: 100% / auto auto auto auto auto;
+    gap: 1px;
+    padding: 1px;
+}
+.tableIntro > div{
+    border-style: ridge;
+    text-align: center;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+.tableIntroImg{
+    width: 130px;
+    height: 130px;
+}
+.FourSitter{
+    display: none;
+}
+.SixSitter{
+    display: none;
+}
+.EightSitter{
+    display: none;
+}
+
+/* Media Query */
+
+@media only screen and  (max-width: 600px){
+    .navbar-brand img{
+        width: 100px;
+        height: 100px;
+    }
+    .btn-outline-success{
+        border: none;
+        color: black;
+        margin: 0%;
+    }
+    .btn-outline-success:hover{
+        border: none;
+        background-color: blanchedalmond;
+        color: black;
+    
+    }
+    .HomePage{
+        display: inline;
+    }
+    .section1{
+        width: 100%;
+    }
+    .section2{
+        width: 100%;
+    }
+    .tableIntro{
+        display: grid;
+        grid: 330px / auto auto auto;
+        background-color: aquamarine;
+    }
+    .tableImgSet{
+        display: none;
+    }
+}
+
