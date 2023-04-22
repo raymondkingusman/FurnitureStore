@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Online Home Furnishing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<!-- **JAVA SCRIPT**  **JAVA SCRIPT**  **JAVA SCRIPT**  **JAVA SCRIPT** -->
+<script>
+/* ***** Selection Pages ***** */
+  function SelectionPages(hidShow){
+    if(hidShow == "HomePage"){
+      document.getElementById("HomePageSection").style.display="inline-block";
+      document.getElementById("section1").style.display="none";
+      document.getElementById("section2").style.display="none";
+    }else{
+      document.getElementById("HomePageSection").style.display="none";
+      document.getElementById("section1").style.display="inline-block";
+      document.getElementById("section2").style.display="inline-block";
+      if(hidShow == "Tables"){
+        document.getElementById("TablesSection").style.display="inline-block";
+        SelectTableCategory('na');
+        document.getElementById("tableIntro").style.display="grid";
+      }
+    }
+  }
+/* ***** END of Selection Pages ***** */
+
+/* ***** TABLES Selection ******/
+    function SelectTableCategory(tableSelect){
+      document.getElementById("tableIntro").style.display="none";
+      document.getElementById("FourSitter").style.display="none";
+      document.getElementById("SixSitter").style.display="none";
+      document.getElementById("EightSitter").style.display="none";
+      
+      if(tableSelect == "4sitter"){
+        document.getElementById("FourSitter").style.display="block";
+      }else if(tableSelect == "6sitter"){
+        document.getElementById("SixSitter").style.display="block";
+      }else if(tableSelect == "8sitter"){
+        document.getElementById("EightSitter").style.display="block";
+      }
+
+    }
+/* ***** END of TABLES Selection ******/
+</script>
+<!-- **JAVA SCRIPT**  **JAVA SCRIPT**  **JAVA SCRIPT**  **JAVA SCRIPT** -->
+<body>
+    <!-- Header -->
+        <div class="header" id="home">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="image/vecteezy_furniture-logo-home-furnishing-design-room-icon_7943793.jpg" alt="logo">
+                  </a>
+
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></button>
+                      </form>
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" onclick="SelectionPages('HomePage')" >Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" onclick="SelectionPages('Tables')">Tables</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Beds</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Sofas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Cabinets</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+      <!-- (HOME PAGE) (HOME PAGE) (HOME PAGE) (HOME PAGE) -->    
+        <div class="HomePage">
+
+          <!-- **Section 1 ** **Section 1 ** **Section 1 **-->
+          <div id="section1" class="section1">
+
+            <div id="TablesSection" class="TablesSection" style="display: none;">
+              <h2>Tables</h2>
+              <ul>
+                <li>Dinning Table Set</li>
+                  <ul>
+                    <li class="selectHover" onClick="SelectTableCategory('4sitter')">4 Sitter</li>
+                    <li class="selectHover" onclick="SelectTableCategory('6sitter')">6 Sitter</li>
+                    <li class="selectHover" onclick="SelectTableCategory('8sitter')">8 Sitter</li>
+                  </ul>
+                <li class="selectHover">Living Room Table</li>
+                <li class="selectHover">Outdoor Table </li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- **Section 2 ** **Section 2 ** **Section 2 **-->
+          <div id="section2" class="section2">
+            <!-- ** TABLES DISPLAY ** ** TABLES DISPLAY ** ** TABLES DISPLAY ** -->
+
+            <!-- ** TABLES INTRO ** -->
+            <div id="tableIntro" class="tableIntro">
+              <div>
+                <p> 4 Sitter Dinning Table</p>
+                <hr>
+                <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52835888901_e9c49d3323_s.jpg"></p>
+                <p>Description</p>
+                <span>(PRICE)</span>
+                <div class="tableImgSet">
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52836337058_c566edc4dc_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52835316452_c38e83ae27_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                </div>
+              </div>
+              <div>
+                <p> 6 Sitter Dinning Table</p>
+                <hr>
+                <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52836316395_1bac09440a_s.jpg"></p>
+                <p>Description</p>
+                <span>(PRICE)</span>
+                <div class="tableImgSet">
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52836094179_2a93bfbeeb_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52835910181_b11f156a07_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                </div>
+              </div>
+              <div>
+                <p> 8 Sitter Dinning Table</p>
+                <hr>
+                <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52835341472_b9668967e3_s.jpg"></p>
+                <p>Description</p>
+                <span>(PRICE)</span>
+                <div class="tableImgSet">
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52836363728_57190b63c9_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52835915736_49d6023f72_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                </div>
+              </div>
+              <div>
+                <p>Living Room Table</p>
+                <hr>
+                <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52836126714_4e0577cba4_s.jpg"></p>
+                <p>Description</p>
+                <span>(PRICE)</span>
+                <div class="tableImgSet">
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52835369152_696b0c8d8e_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52836379898_0b147292a7_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                </div>
+              </div>
+              <div>
+                <p>Outdoor Table</p>
+                <hr>
+                <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52835518042_2ee765fe98_s.jpg"></p>
+                <p>Description</p>
+                <span>(PRICE)</span>
+                <div class="tableImgSet">
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52835517017_6c31446c60_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                  <hr>
+                  <p><img class="tableIntroImg" src="https://live.staticflickr.com/65535/52835518377_a31fc6b4c5_s.jpg"></p>
+                  <p>Description</p>
+                  <span>(PRICE)</span>
+                </div>
+              </div>
+            </div><!-- ** end of intro table ** -->
+
+            <!-- ** 4 SITTER DINING TABLE ** -->
+            <div id="FourSitter" class="FourSitter">
+              <h2>4 Sitter Dinning Table</h2>
+            </div><!--** end of 4 sitter dinning table **-->
+
+            <!-- ** 6 SITTER DINING TABLE ** -->
+            <div id="SixSitter" class="SixSitter">
+              <h2>6 Sitter Dinning Table</h2>
+            </div><!--** end of 6 sitter dinning table **-->
+
+            <!-- ** 8 SITTER DINING TABLE ** -->
+            <div id="EightSitter" class="EightSitter">
+              <h2>8 Sitter Dinning Table</h2>
+            </div><!--** end of 8 sitter dinning table **  -->
+
+
+          </div><!-- ** End of Section2 ** -->
+
+          <div id="HomePageSection" class="HomePageSection">
+            <h1> HOME PAGE SECTION</h1>
+          </div><!-- ** End of Home Page Section ** -->
+
+        </div><!-- ** End of Main Page ** -->
+
+
+
+    <!-- Filter -->
+
+
+
+
+
+
+    <!-- Sort -->
+
+
+
+
+
+    <!-- Filfered Item -->
+
+
+
+
+
+
+    <!-- About -->
+
+
+
+
+
+
+
+    <!-- Contact -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>
