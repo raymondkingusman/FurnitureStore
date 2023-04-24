@@ -31,7 +31,7 @@
 .section1{
     display: none;
     border-style: solid;
-    border-color: rgba(0, 0, 0,0.7);
+    border-color: rgba(0, 0, 0,0.2);
     border-radius: 6px;
     height: 100%;
     width: 25%;
@@ -41,10 +41,10 @@
 .section2{
     display: none;
     border-style: solid;
-    border-color: rgba(0, 0, 0,0.7);
+    border-color: rgba(61, 61, 61, 0.2);
     border-radius: 6px;
-    height: 100%;
-    width: 75%;
+    height: auto;
+    width: auto;
     margin: 2px;
 }
 /*Category selection*/
@@ -56,6 +56,8 @@
 }
 
 /* Tables*/
+
+/* Table Intro Styles*/
 .tableIntro{
     height: 100%;
     width: 100%;
@@ -74,9 +76,28 @@
     width: 130px;
     height: 130px;
 }
-.FourSitter{
+/* End of Intro Sitter */
+
+/* Four Sitter Styles */
+.FurnituresDiv{
     display: none;
 }
+.FurnSectionGrid{
+    display: grid;
+    grid-template-rows: repeat(2, 250px);
+    grid-template-columns: repeat(5, 1fr);
+}
+.FurnImg{
+    border-style: ridge;
+    text-align: center;
+    border-radius: 5px;
+}
+.FurnImage{
+    height: 160px;
+    width: 160px;
+}
+
+/* End of Four Sitter Style */
 .SixSitter{
     display: none;
 }
@@ -112,12 +133,15 @@
         width: 100%;
     }
     .tableIntro{
-        display: grid;
         grid: 330px / auto auto auto;
-        background-color: aquamarine;
     }
     .tableImgSet{
         display: none;
+    }
+    .FurnSectionGrid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 250px);
+        
     }
 }
 

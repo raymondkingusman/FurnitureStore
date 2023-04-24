@@ -9,45 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="displayImages.js"></script>
 </head>
 <!-- **JAVA SCRIPT**  **JAVA SCRIPT**  **JAVA SCRIPT**  **JAVA SCRIPT** -->
 <script>
-/* ***** Selection Pages ***** */
-  function SelectionPages(hidShow){
-    if(hidShow == "HomePage"){
-      document.getElementById("HomePageSection").style.display="inline-block";
-      document.getElementById("section1").style.display="none";
-      document.getElementById("section2").style.display="none";
-    }else{
-      document.getElementById("HomePageSection").style.display="none";
-      document.getElementById("section1").style.display="inline-block";
-      document.getElementById("section2").style.display="inline-block";
-      if(hidShow == "Tables"){
-        document.getElementById("TablesSection").style.display="inline-block";
-        SelectTableCategory('na');
-        document.getElementById("tableIntro").style.display="grid";
-      }
-    }
-  }
-/* ***** END of Selection Pages ***** */
 
-/* ***** TABLES Selection ******/
-    function SelectTableCategory(tableSelect){
-      document.getElementById("tableIntro").style.display="none";
-      document.getElementById("FourSitter").style.display="none";
-      document.getElementById("SixSitter").style.display="none";
-      document.getElementById("EightSitter").style.display="none";
-      
-      if(tableSelect == "4sitter"){
-        document.getElementById("FourSitter").style.display="block";
-      }else if(tableSelect == "6sitter"){
-        document.getElementById("SixSitter").style.display="block";
-      }else if(tableSelect == "8sitter"){
-        document.getElementById("EightSitter").style.display="block";
-      }
-
-    }
-/* ***** END of TABLES Selection ******/
 </script>
 <!-- **JAVA SCRIPT**  **JAVA SCRIPT**  **JAVA SCRIPT**  **JAVA SCRIPT** -->
 <body>
@@ -96,22 +62,23 @@
           <!-- **Section 1 ** **Section 1 ** **Section 1 **-->
           <div id="section1" class="section1">
 
-            <div id="TablesSection" class="TablesSection" style="display: none;">
+            <div id="FurnSection" class="FurnSection" style="display: none;">
               <h2>Tables</h2>
               <ul>
                 <li>Dinning Table Set</li>
                   <ul>
-                    <li class="selectHover" onClick="SelectTableCategory('4sitter')">4 Sitter</li>
-                    <li class="selectHover" onclick="SelectTableCategory('6sitter')">6 Sitter</li>
-                    <li class="selectHover" onclick="SelectTableCategory('8sitter')">8 Sitter</li>
+                    <li class="selectHover" onclick="SelectFurnCategory('4sitter')">4 Sitter</li>
+                    <li class="selectHover" onclick="SelectFurnCategory('6sitter')">6 Sitter</li>
+                    <li class="selectHover" onclick="SelectFurnCategory('8sitter')">8 Sitter</li>
                   </ul>
-                <li class="selectHover">Living Room Table</li>
-                <li class="selectHover">Outdoor Table </li>
+                <li class="selectHover" onclick="SelectFurnCategory('LivingRoom')">Living Room Table</li>
+                <li class="selectHover" onclick="SelectFurnCategory('Outdoor')">Outdoor Table </li>
               </ul>
             </div>
 
           </div>
           <!-- **Section 2 ** **Section 2 ** **Section 2 **-->
+
           <div id="section2" class="section2">
             <!-- ** TABLES DISPLAY ** ** TABLES DISPLAY ** ** TABLES DISPLAY ** -->
 
@@ -205,25 +172,70 @@
             </div><!-- ** end of intro table ** -->
 
             <!-- ** 4 SITTER DINING TABLE ** -->
-            <div id="FourSitter" class="FourSitter">
-              <h2>4 Sitter Dinning Table</h2>
+            <div id="FurnituresDiv" class="FurnituresDiv" style="text-align: center;">
+              <h2 id="FurnSectH2"></h2>
+              <div class="FurnSectionGrid">
+<!-------------------------------------------------------------------------------------------------------------------------->
+                <div class="FurnImg">
+                  <img id="img_id_1" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>
+                <div class="FurnImg">
+                  <img id="img_id_2" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>
+                <div class="FurnImg">
+                  <img id="img_id_3" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>
+                <div class="FurnImg">
+                  <img id="img_id_4" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>
+                <div class="FurnImg">
+                  <img id="img_id_5" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>
+                <div class="FurnImg">
+                  <img id="img_id_6" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>
+                <div class="FurnImg">
+                  <img id="img_id_7" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>
+                <div class="FurnImg">
+                  <img id="img_id_8" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>
+                <div class="FurnImg">
+                  <img id="img_id_9" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>
+                <div class="FurnImg">
+                  <img id="img_id_10" class="FurnImage" src=""></p>
+                  <p>**Description**</p>
+                  <span>(PRICE)</span>
+                </div>           
+<!-------------------------------------------------------------------------------------------------------------------------->
+              </div>
             </div><!--** end of 4 sitter dinning table **-->
-
-            <!-- ** 6 SITTER DINING TABLE ** -->
-            <div id="SixSitter" class="SixSitter">
-              <h2>6 Sitter Dinning Table</h2>
-            </div><!--** end of 6 sitter dinning table **-->
-
-            <!-- ** 8 SITTER DINING TABLE ** -->
-            <div id="EightSitter" class="EightSitter">
-              <h2>8 Sitter Dinning Table</h2>
-            </div><!--** end of 8 sitter dinning table **  -->
-
 
           </div><!-- ** End of Section2 ** -->
 
           <div id="HomePageSection" class="HomePageSection">
+            
             <h1> HOME PAGE SECTION</h1>
+            <div id="fileContents"></div>
           </div><!-- ** End of Home Page Section ** -->
 
         </div><!-- ** End of Main Page ** -->

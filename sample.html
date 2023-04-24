@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<h2>Nested JavaScript Objects and Arrays.</h2>
+<p id="demo"></p>
+
+<script>
+let x = "";
+const FurType = {
+  Selected_Furniture: [
+    {FurSet:"4sitter", Img_id:["img1", "img2", "img3"]},
+    {FurSet:"6sitter", Img_id:["img4", "img5", "img6"]},
+    {FurSet:"8sitter", Img_id:["img7", "img8", "img9"]}
+  ]
+}
+
+const samples = [["set1","set2","set3"],["set4","set5","set6"],["set7","set8","set9"]];
+const test = ["test1=", "test2=", "test3="];
+for (var i=0; i < 3; i++) {
+  document.write(test[i]);
+  for (var y=0; y < 3; y++) {
+  document.write(samples[i][y]);
+}
+  document.write(":::::::::::");
+}
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
