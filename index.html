@@ -43,7 +43,7 @@
                         <a class="nav-link" onclick="SelectionPages('Tables')">Tables</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Beds</a>
+                        <a class="nav-link" onclick="SelectionPages('Beds')">Beds</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Sofas</a>
@@ -63,8 +63,9 @@
           <div id="section1" class="section1">
 
             <div id="FurnSection" class="FurnSection" style="display: none;">
-              <h2>Tables</h2>
-              <ul>
+              <h2 id="section1_header"></h2>
+
+              <ul id="section1_table_list" style="display: none;">
                 <li>Dinning Table Set</li>
                   <ul>
                     <li class="selectHover" onclick="SelectFurnCategory('4sitter')">4 Sitter</li>
@@ -73,6 +74,12 @@
                   </ul>
                 <li class="selectHover" onclick="SelectFurnCategory('LivingRoom')">Living Room Table</li>
                 <li class="selectHover" onclick="SelectFurnCategory('Outdoor')">Outdoor Table </li>
+              </ul>
+
+              <ul id="section1_bed_list" style="display: none;">
+                <li class="selectHover" onclick="SelectFurnCategory('SingleBed')">Single Bed</li>
+                <li class="selectHover" onclick="SelectFurnCategory('QueenBed')">Queen Size Bed</li>
+                <li class="selectHover" onclick="SelectFurnCategory('KingBed')">King Size Bed</li>
               </ul>
             </div>
 
@@ -171,7 +178,7 @@
               </div>
             </div><!-- ** end of intro table ** -->
 
-            <!-- ** 4 SITTER DINING TABLE ** -->
+            <!-- ** Display Furniture Images ** -->
             <div id="FurnituresDiv" class="FurnituresDiv" style="text-align: center;">
               <h2 id="FurnSectH2"></h2>
               <div class="FurnSectionGrid">
@@ -228,7 +235,7 @@
                 </div>           
 <!-------------------------------------------------------------------------------------------------------------------------->
               </div>
-            </div><!--** end of 4 sitter dinning table **-->
+            </div><!--** end of Display Furniture Images **-->
 
           </div><!-- ** End of Section2 ** -->
 

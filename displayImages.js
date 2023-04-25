@@ -8,11 +8,19 @@ function SelectionPages(hidShow) {
     document.getElementById("HomePageSection").style.display = "none";
     document.getElementById("section1").style.display = "inline-block";
     document.getElementById("section2").style.display = "inline-block";
+    document.getElementById("FurnSection").style.display = "inline-block";
+    document.getElementById("FurnituresDiv").style.display = "none";
+    document.getElementById("section1_bed_list").style.display = "none";
+    document.getElementById("section1_table_list").style.display = "none";
+
     if (hidShow == "Tables") {
-      document.getElementById("FurnSection").style.display = "inline-block";
-      SelectFurnCategory("na");
       document.getElementById("tableIntro").style.display = "grid";
-      document.getElementById("FurnituresDiv").style.display = "none";
+      document.getElementById("section1_table_list").style.display = "block";
+      document.getElementById("section1_header").textContent =
+        "Tables Selection";
+    } else if (hidShow == "Beds") {
+      document.getElementById("section1_header").textContent = "Bed Selection";
+      document.getElementById("section1_bed_list").style.display = "block";
     }
   }
 }
@@ -24,6 +32,7 @@ function SelectFurnCategory(tableSelect) {
   document.getElementById("FurnituresDiv").style.display = "block";
   let Tables_Img = [
     [
+      /*links for 4 sitter dinning table images*/
       "https://live.staticflickr.com/65535/52836297535_69e4f0ba07_o.png",
       "https://live.staticflickr.com/65535/52835315912_a3c0055d68_o.png",
       "https://live.staticflickr.com/65535/52835316452_52de8846f2_o.png",
@@ -36,6 +45,7 @@ function SelectFurnCategory(tableSelect) {
       "https://live.staticflickr.com/65535/52836072824_077a740cd6_o.png",
     ],
     [
+      /*links for 6 sitter dinning table images*/
       "https://live.staticflickr.com/65535/52836317085_c718321dbf_c.jpg",
       "https://live.staticflickr.com/65535/52836317075_f0e1f440f1_c.jpg",
       "https://live.staticflickr.com/65535/52835910181_b11f156a07_c.jpg",
@@ -48,6 +58,7 @@ function SelectFurnCategory(tableSelect) {
       "https://live.staticflickr.com/65535/52836358233_1b7a0399cf_c.jpg",
     ],
     [
+      /*links for 8 sitter dinning table images*/
       "https://live.staticflickr.com/65535/52835341752_6995c13070_c.jpg",
       "https://live.staticflickr.com/65535/52835915736_49d6023f72_c.jpg",
       "https://live.staticflickr.com/65535/52836322195_64960243b4_z.jpg",
@@ -60,6 +71,7 @@ function SelectFurnCategory(tableSelect) {
       "https://live.staticflickr.com/65535/52835341597_f5e4486577_c.jpg",
     ],
     [
+      /*links for Living Room table images*/
       "https://live.staticflickr.com/65535/52835357777_2446ea8fb2_c.jpg",
       "https://live.staticflickr.com/65535/52836380288_182c38dddc_c.jpg",
       "https://live.staticflickr.com/65535/52836379898_0b147292a7_c.jpg",
@@ -72,6 +84,7 @@ function SelectFurnCategory(tableSelect) {
       "https://live.staticflickr.com/65535/52836105949_5d3dedb88a_c.jpg",
     ],
     [
+      /*links for Outdoor table images*/
       "https://live.staticflickr.com/65535/52836495035_f0b732b89e_c.jpg",
       "https://live.staticflickr.com/65535/52836092116_c749f48743_c.jpg",
       "https://live.staticflickr.com/65535/52835518377_a31fc6b4c5_c.jpg",
@@ -82,7 +95,48 @@ function SelectFurnCategory(tableSelect) {
       "https://live.staticflickr.com/65535/52836537658_5076d7d586_c.jpg",
       "https://live.staticflickr.com/65535/52835518042_2ee765fe98_c.jpg",
       "https://live.staticflickr.com/65535/52835515307_09a9f56f11_c.jpg",
-    ]
+    ],
+    [
+      /*links for single bed images*/
+      "https://live.staticflickr.com/65535/52844663926_3b3ea1a771_o.png",
+      "https://live.staticflickr.com/65535/52845060025_8a2d4e1091_o.png",
+      "https://live.staticflickr.com/65535/52845113183_16d517d92d_o.png",
+      "https://live.staticflickr.com/65535/52844851294_24930c5aa9_o.png",
+      "https://live.staticflickr.com/65535/52844851189_b6228afcac_o.png",
+      "https://live.staticflickr.com/65535/52844851184_1be6389393_o.png",
+      "https://live.staticflickr.com/65535/52845113143_a061eaac38_o.png",
+      "https://live.staticflickr.com/65535/52844851179_a8e2a57823_o.png",
+      "https://live.staticflickr.com/65535/52845059910_ab005ab7f2_o.png",
+      "https://live.staticflickr.com/65535/52844663771_cd41a905c3_o.png",
+    ],
+
+    [
+      /*links for queen bed images*/
+      "https://live.staticflickr.com/65535/52844666001_8e78d14639_o.png",
+      "https://live.staticflickr.com/65535/52844084857_2b96ba5d4e_o.png",
+      "https://live.staticflickr.com/65535/52845115108_fb87994880_o.png",
+      "https://live.staticflickr.com/65535/52844853394_8e47e2dab6_o.png",
+      "https://live.staticflickr.com/65535/52844853384_45ac1be73b_o.png",
+      "https://live.staticflickr.com/65535/52845115083_4482380bc2_o.png",
+      "https://live.staticflickr.com/65535/52845115043_8fcc90ed81_o.png",
+      "https://live.staticflickr.com/65535/52844853359_a180db2b4b_o.png",
+      "https://live.staticflickr.com/65535/52844665836_a08439ab58_o.png",
+      "https://live.staticflickr.com/65535/52845061940_1fb8ecd3b8_o.png",
+    ],
+
+    [
+      /*links for king bed images*/
+      "https://live.staticflickr.com/65535/52845064515_6a6fdc85a9_o.png",
+      "https://live.staticflickr.com/65535/52845117583_8f064f87d2_o.png",
+      "https://live.staticflickr.com/65535/52844855599_147734b273_o.png",
+      "https://live.staticflickr.com/65535/52844087187_8ec4ed14af_o.png",
+      "https://live.staticflickr.com/65535/52844668391_907395320e_o.png",
+      "https://live.staticflickr.com/65535/52844087172_1dd3a4ed6d_o.png",
+      "https://live.staticflickr.com/65535/52844855554_782fc398c0_o.png",
+      "https://live.staticflickr.com/65535/52844855559_0f1f1c0c29_o.png",
+      "https://live.staticflickr.com/65535/52844087097_acbe71cc20_o.png",
+      "https://live.staticflickr.com/65535/52844087122_8b2ca29b05_o.png",
+    ],
   ];
 
   let x = 0;
@@ -94,6 +148,9 @@ function SelectFurnCategory(tableSelect) {
     "8sitter",
     "LivingRoom",
     "Outdoor",
+    "SingleBed",
+    "QueenBed",
+    "KingBed",
   ];
   let Furniture_Header = [
     "4 Sitter Dining Table Set",
@@ -101,7 +158,11 @@ function SelectFurnCategory(tableSelect) {
     "8 Sitter Dining Table Set",
     "Living Room Tables",
     "Outdoor Tables",
+    "Single Size Bed",
+    "Queen Size Bed",
+    "King Size Bed",
   ];
+
   do {
     if (tableSelect == Set_of_Furniture[x]) {
       document.getElementById("FurnSectH2").textContent = Furniture_Header[x];
@@ -114,7 +175,7 @@ function SelectFurnCategory(tableSelect) {
         var temp2 = x + "-" + y - 1;
       }
       SelectedSection = false;
-    } else if (x > 3) {
+    } else if (x > Set_of_Furniture.length) {
       SelectedSection = false;
     }
     x++;
